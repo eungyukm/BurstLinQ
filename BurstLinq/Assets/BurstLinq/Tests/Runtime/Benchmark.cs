@@ -8,6 +8,10 @@ using Unity.PerformanceTesting;
 
 namespace BurstLinq.Tests
 {
+    // Sample Unit :  Microsecond
+    // LINQ Min 88.10 | For Min 38.70| BurstLinq Min 0.30
+    // LINQ Median 88.60 | For Median 38.80 | BurstLinq Median 0.50
+    // LINQ Max 90.00 | For 42.00 | BurstLinq 0.80
     public class BenchmarkFloatSum
     {
         const int WarmupCount = 5;
@@ -20,7 +24,7 @@ namespace BurstLinq.Tests
         {
             GC.Collect();
         }
-
+        
         [Test, Performance]
         public void For()
         {
@@ -67,6 +71,10 @@ namespace BurstLinq.Tests
         }
     }
 
+    // Sample Unit :  Microsecond
+    // LINQ Min 85.70 | For Min 8.10| BurstLinq Min 0.90
+    // LINQ Median 88.00 | For Median 8.20 | BurstLinq Median 1.00
+    // LINQ Max 92.80 | For 9.10 | BurstLinq 3.80
     public class BenchmarkIntSequenceEqual
     {
         const int WarmupCount = 5;
@@ -137,7 +145,10 @@ namespace BurstLinq.Tests
             .Run();
         }
     }
-
+    // Sample Unit :  Microsecond
+    // LINQ Min 68.80 | For Min 6.00 | BurstLinq Min 2.10
+    // LINQ Median 69.40 | For Median 6.20 | BurstLinq Median 2.10
+    // LINQ Max 71.90 | For 6.00 | BurstLinq
     public class BenchmarkDoubleMin
     {
         const int WarmupCount = 5;
@@ -201,7 +212,10 @@ namespace BurstLinq.Tests
             .Run();
         }
     }
-
+    // Sample Unit :  Microsecond
+    // LINQ Min 57.60 | For Min 5.10 | BurstLinq Min 0.40
+    // LINQ Median 57.90 | For Median 6.20 | BurstLinq Median 0.50
+    // LINQ Max 68.90 | For 6.50 | BurstLinq 3.50
     public class BenchmarkIntMin
     {
         const int WarmupCount = 5;
@@ -261,7 +275,10 @@ namespace BurstLinq.Tests
         }
     }
 
-
+    // Sample Unit :  Microsecond
+    // LINQ Min 384.50 | For Min 5.00 | BurstLinq Min 0.90
+    // LINQ Median 393.50 | For Median 5.20 | BurstLinq Median 1.10
+    // LINQ Max 478.80 | For 7.20 | BurstLinq 3.50
     public class BenchmarkIntContains
     {
         const int WarmupCount = 5;
